@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ProjectApplication1</string>
+    <string name="videoplayer_sharedData">VideoplayerSharedData</string>
+</resources>

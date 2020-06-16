@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="itemclicklistener"
+            type="com.example.projectapplication1.util.ItemClickListener" />
+    </data>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/playerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:background="@color/black"
+        android:padding="0dp"
+        app:controller_layout_id="@layout/item_player_controler"
+        app:show_timeout="1000"
+        app:shutter_background_color="@color/black" />
+
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:alpha="0.8"-->
+<!--        android:src="@drawable/bg_gradient_feed" />-->
+
+    <ImageView
+        android:id="@+id/iv_bookmarked"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:onClick="@{() -> itemclicklistener.cliclToRemoveBookmark()}"
+        android:visibility="gone"
+        android:src="@drawable/bookmarked"
+        />
+<!--    android:onClick="@{() -> itemclicklistener.cliclToRemoveBookmark()}"-->
+    <ImageView
+        android:id="@+id/iv_unbookmarked"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:onClick="@{() -> itemclicklistener.clickToBookmark()}"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:visibility="visible"
+        android:src="@drawable/unbookmarked"
+        />
+<!--    android:onClick="@{() -> itemclicklistener.clickToBookmark()}"-->
+</RelativeLayout>
+</layout>
